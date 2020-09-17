@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   namespace :admin do
   	root 'products#top'
   	resources :products, except: [:destroy]
-
+  	resources :genres, only: [:create, :index, :edit, :update]
   end
 end

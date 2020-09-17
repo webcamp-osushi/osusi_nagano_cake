@@ -1,1 +1,12 @@
 <h1>商品詳細</h1>
+<div class= "img_area">
+	<%= image_tag attachment_url(@product, :image, :fill, 300, 300, format: "jpg", fallback: "no-image-mini.jpg") %>
+</div>
+<div class= "product_text_area">
+	<p>商品名</p><%= @product.name %>
+	<p>商品説明</p><%= @product.introduction %>
+	<p>ジャンル</p>
+	<p>税込価格(税抜き価格)</p><%= @product.price %>円
+	<p>販売ステータス</p><%= @product.is_active %>
+</div>
+
